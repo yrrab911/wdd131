@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+header, main, footer {
+    width: 100%;
+}
+
+header {
+    background-color: #002D62; 
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+h1 {
+    color: white;
+    font-size: 2.5em;
+    letter-spacing: 1.5px;
+}
+
+h1 span {
+    color: yellow;
+}
+
+
+nav ul {
+    display: flex; 
+    justify-content: space-between;
+    background-color: rgb(32, 31, 31);
+    list-style: none;
+    padding: 15px 0;
+    margin-bottom: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #002D62;
+    color: yellow; 
+}
+
+
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr; 
+    gap: 20px; 
+    padding: 20px;
+}
+
+
+.card {
+    border: 2px solid black;
+    padding: 20px;
+    margin: 10px;
+}
+
+.card h2 {
+    background-color: #002D62;
+    color: white;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 1.8em;
+    text-align: center; 
+}
+
+.card img {
+    max-width: 100%;
+}
+
+.card h3 {
+    font-weight: bold;
+    color: black;
+    margin: 20px 0 10px;
+    font-size: 1.5em;
+    text-align: center; 
+}
+
+.card h3::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    margin-top: 10px;
+}
+
+
+#paragraph1, #paragraph2 {
+    padding: 20px 10px 10px 10px; 
+    font-size: 2.4em;
+}
+
+
+#paragraph1, #paragraph2, img {
+    display: inline-block;
+    vertical-align: top;
+}
+
+#paragraph1 {
+    width: 58%; 
+}
+
+img#image1 {
+    width: 40%;
+}
+
+img#image2 {
+    width: 50%;
+}
+
+#paragraph2 {
+    width: 45%;
+}
+
+
+.card ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.card ul li {
+    margin-bottom: 15px;
+}
+
+.card ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease; 
+}
+
+.card ul li a:hover {
+    background-color: #002D62; 
+    color: yellow; 
+}
+
+
+footer {
+    background-color: #002D62; 
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+    font-size: 1.2em;
+}

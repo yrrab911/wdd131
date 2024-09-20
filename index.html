@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Dynamic Web Fundamentals - Barry Leidy</title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals. Your Name. Web development, HTML, CSS, JavaScript, Flexbox, Grid, responsive design.">
+    <meta name="author" content="Your Name">
+    <link rel="stylesheet" href="styles/base.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="styles/getdates.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>WDD 131 - Dynamic Web Fundamentals - Barry Leidy</h1>
+        <nav>
+            <ul>
+                <li><a href="www.linkedin.com/in/barry-leidy-28b5312a8">LinkedIn Profile</a></li>
+                <li><a href="https://byui.instructure.com/">I-Learn</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/2?lang=eng">Scriptures</a></li>
+                <li><a href="D:\FinalProject">Final Project</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2>About me</h2>
+            <a id="paragraph1">My name is Barry Leidy, I am a computer science major. I like to play sports such as volleyball and soccer. I am currently working for BYU-I doing early morning custodial work.</a>
+            <img src="images/me.jpg" alt="image1"/>
+            <h3>Orlando Florida</h3>
+            <img src="images/florida.png" alt="image2"/>
+            <a id="paragraph2">Orlando Florida is a vibrant city located in Central Florida. It is known for its world-famous theme parks, including Walt Disney World, Universal Studios, and SeaWorld. With its subtropical climateyou better watch out for mosquitos and alligators.</a>
+        </section>
+
+        <section class="card">
+            <h2>Web Dev Rescources</h2>
+            <ul>
+                <li><a href="https://www.w3schools.com/html/">W3 schools</a></li>
+                <li><a href="https://css-tricks.com/">css tricks</a></li>
+                <li><a href="https://www.udemy.com/">Udemy</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span>Barry Leidy - Idaho</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script>
+        document.getElementById('currentyear').textContent = new Date().getFullYear();
+        document.getElementById('lastModified').textContent = 'Last Modified: ' + document.lastModified;
+    </script>
+</body>
+</html>
