@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align items horizontally */
+}
+
+header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+input[type="text"] {
+    padding: 0.5rem;
+    width: 200px;
+    margin-right: 0.5rem; /* Add margin to the right of the input */
+}
+
+button {
+    padding: 0.5rem;
+}
+
+main {
+    display: flex; /* Use flexbox to align input and button */
+    justify-content: center; /* Center horizontally */
+    margin-bottom: 1rem; /* Add some space below the main section */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%; /* Make sure the list uses full width */
+}
+
+li {
+    background: #fff;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+button.delete {
+    background-color: #ff4c4c;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
