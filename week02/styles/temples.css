@@ -16,10 +16,15 @@ header {
     padding: 10px;
 }
 
+
 .hamburger {
     display: none;
     cursor: pointer;
     font-size: 24px;
+}
+
+.hamburger:hover + nav {
+    display: flex;
 }
 
 nav {
@@ -34,7 +39,43 @@ nav ul {
 }
 
 nav ul li {
-    margin-left: 20px; 
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        background-color: #5c4b8a;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+    }
+
+    .hamburger:hover + nav {
+        display: flex;
+    }
+
+    nav ul {
+        display: block;
+    }
+
+    nav ul li {
+        text-align: center;
+        border-top: 1px solid white;
+        padding: 10px 0;
+        margin-left: 0;
+    }
 }
 
 nav ul li a {
