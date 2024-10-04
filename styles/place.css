@@ -14,8 +14,7 @@
 body {
     font-family: 'Oswald', sans-serif;
     font-weight: 400;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
 }
@@ -37,7 +36,6 @@ footer {
     color: var(--footer-color);
     padding: 2rem;
     text-align: center;
-    font-family: 'Oswald', sans-serif;
     font-weight: bold;
     box-shadow: 0 0 10px var(--dark-bg);
 }
@@ -48,7 +46,6 @@ footer {
 
 .hero picture img {
     width: 100%;
-
     height: auto;
     box-shadow: 0 0 10px var(--dark-bg);
 }
@@ -56,6 +53,7 @@ footer {
 .data,
 .weather {
     background-color: var(--light-bg);
+    color: black; /* Ensure text is visible */
     box-shadow: 0 0 10px var(--dark-bg);
     border: 2px solid #ccc;
     border-radius: 16px;
@@ -64,41 +62,47 @@ footer {
 }
 
 .label p {
-    font-family: 'Oswald', sans-serif;
-    color: black;
     font-weight: bold;
+    margin: 0; /* Remove default margin for labels */
+}
+
+.text p {
+    margin: 0; /* Remove default margin for text */
 }
 
 .data .label,
 .weather .label {
-    grid-column: 1 / 2;
     text-align: right;
     padding-right: 10px;
+    flex: 1; /* Make label flexible to fill space */
 }
 
-.weather .text,
-.data .text {
-    grid-column: 2 / 3;
+.data .text,
+.weather .text {
     text-align: left;
     padding-right: 10px;
+    flex: 2; /* Make text flexible to fill space */
 }
 
 .data h2,
 .weather h2 {
-    grid-column: 1 / -1;
     text-align: center;
-    font-family: 'Oswald', sans-serif;
-    color: black;
+    color: black; /* Ensure title text is visible */
     font-weight: bold;
 }
 
 .weather picture {
-    grid-column: 1 / -1;
     text-align: center;
     width: 100%;
     height: auto;
 }
 
+.data,
+.weather {
+    display: flex; /* Use flexbox layout */
+    justify-content: space-between; /* Distribute space between labels and text */
+    padding: 10px; /* Adjust padding as needed */
+}
 
 @media (orientation: portrait) {
     body {
@@ -112,7 +116,6 @@ footer {
         margin: 10px;
     }
 }
-
 
 @media screen and (min-width: 700px) {
     .container {
@@ -147,7 +150,6 @@ footer {
 
     .data,
     .weather {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        display: flex; /* Use flexbox layout for wider screens */
     }
 }
