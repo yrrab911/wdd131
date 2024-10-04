@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The United States of America - Florida</title>
+    <meta name="description" content="Country Page for Rexburg, Idaho, United States of America"/>
+    <meta name="author" content="Jessen Forbush"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Florida, United States Of America</h1>
+    </header>
+    <main>
+        <div class="container">
+            <div class="hero">
+                <picture>
+                    <source type="image/jpg" media="(min-width: 700px)" srcset="images/florida2.jpg">
+                    <img src="images/florida2.jpg" alt="Picture of Florida">
+                </picture>
+            </div>
+            <div class="data">
+                <h2>Data</h2>
+                <div class="label">
+                    <p>Area:</p>
+                    <p>Population:</p>
+                    <p>Capital:</p>
+                    <p>Languages:</p>
+                    <p>Currency:</p>
+                    <p>Time Zone:</p>
+                    <p>Calling Code:</p>
+                    <p>Internet TLD:</p>
+                </div>
+                <div class="text">
+                    <p id="area">65,758 mi²</p>
+                    <p id="population">22.24 million</p>
+                    <p id="capital">Tallahassee, Florida</p>
+                    <p id="languages">English & Spanish</p>
+                    <p id="currency">United States Dollar</p>
+                    <p id="time-zone">Eastern Daylight Time</p>
+                    <p id="call-code">+1</p>
+                    <p id="tld">.us</p>
+                </div>
+            </div>
+
+            <div class="weather">
+                <h2 id="weather-title">Weather</h2>
+                <picture>
+                    <img src="images/1530391_weather_clouds_sun_sunny_icon.svg" alt="Weather Icon" width="100">
+                </picture>
+                <div class="label">
+                    <p>Temperature:</p>
+                    <p>Conditions:</p>
+                    <p>Wind:</p>
+                    <p>Wind Chill:</p>
+                </div>
+                <div class="text">
+                    <p id="temperature"></p>
+                    <p id="conditions"></p>
+                    <p id="wind"></p>
+                    <p id="chill"></p>
+                    <p>N/A</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Barry Leidy | Last Modified: <span id="lastModified"></span></p>
+    </footer>
+</body>
+
+</html>

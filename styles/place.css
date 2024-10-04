@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+:root {
+    --gray: #B6B6BD;
+    --red: #687195;
+    --light-bg: #E0E4E8;
+    --dark-bg: #333;
+    --header-bg: #687195;
+    --header-color: #fff;
+    --footer-bg: #B6B6BD;
+    --footer-color: #000;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: var(--header-bg);
+    color: var(--header-color);
+    text-align: center;
+    box-shadow: 0 0 10px var(--dark-bg);
+}
+
+header h1 {
+    margin: 5px;
+    padding: 20px;
+}
+
+footer {
+    background: var(--footer-bg);
+    color: var(--footer-color);
+    padding: 2rem;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    box-shadow: 0 0 10px var(--dark-bg);
+}
+
+.container {
+    position: relative;
+}
+
+.hero picture img {
+    width: 100%;
+
+    height: auto;
+    box-shadow: 0 0 10px var(--dark-bg);
+}
+
+.data,
+.weather {
+    background-color: var(--light-bg);
+    box-shadow: 0 0 10px var(--dark-bg);
+    border: 2px solid #ccc;
+    border-radius: 16px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.label p {
+    font-family: 'Oswald', sans-serif;
+    color: black;
+    font-weight: bold;
+}
+
+.data .label,
+.weather .label {
+    grid-column: 1 / 2;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.weather .text,
+.data .text {
+    grid-column: 2 / 3;
+    text-align: left;
+    padding-right: 10px;
+}
+
+.data h2,
+.weather h2 {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    color: black;
+    font-weight: bold;
+}
+
+.weather picture {
+    grid-column: 1 / -1;
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+
+
+@media (orientation: portrait) {
+    body {
+        font-size: 4vw;
+    }
+
+    .data,
+    .weather {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 10px;
+    }
+}
+
+
+@media screen and (min-width: 700px) {
+    .container {
+        position: relative;
+    }
+
+    .weather {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        opacity: 0.85;
+    }
+
+    .data {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        opacity: 0.85;
+    }
+
+    #weather-title::after {
+        content: " ⛅";
+    }
+
+    .weather picture {
+        display: none;
+    }
+
+    .data,
+    .weather {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
