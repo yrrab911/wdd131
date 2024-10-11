@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    position: relative; /* Add this to position elements correctly */
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 24px; /* Adjust size if needed */
+    margin-left: auto; /* Align to the right */
+}
+
+main {
+    padding: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.temple-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+    transition: transform 0.2s;
+}
+
+.temple-card:hover {
+    transform: scale(1.05);
+}
+
+.temple-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.temple-card h3 {
+    margin: 10px 0 5px;
+    font-size: 1.25em;
+}
+
+.temple-card p {
+    margin: 5px 0;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+@media (min-width: 768px) {
+    header {
+        justify-content: space-between;
+    }
+
+    nav {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 50px;
+        right: 20px; /* Align to the right with margin */
+        border-radius: 5px;
+        padding: 10px;
+        z-index: 1000;
+    }
+
+    nav.active ul {
+        display: flex;
+    }
+}

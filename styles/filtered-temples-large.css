@@ -1,0 +1,26 @@
+@media (min-width: 768px) {
+    nav {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    header {
+        justify-content: space-between;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .temple-card {
+        padding: 20px;
+    }
+
+    .temple-card h3 {
+        font-size: 1.5em;
+    }
+
+    .temple-card p {
+        font-size: 1em;
+    }
+}

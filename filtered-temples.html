@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtered Temple Album</title>
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <link rel="stylesheet" href="styles/filtered-temples.css" media="(min-width: 768px)">
+    <script src="scripts/filtered-temples.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Temple Album</h1>
+        <div class="hamburger" id="hamburger">☰</div>
+        <nav id="nav">
+            <ul>
+                <li><a href="#" onclick="filterTemples('home')">Home</a></li>
+                <li><a href="#" onclick="filterTemples('old')">Old</a></li>
+                <li><a href="#" onclick="filterTemples('new')">New</a></li>
+                <li><a href="#" onclick="filterTemples('large')">Large</a></li>
+                <li><a href="#" onclick="filterTemples('small')">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h2>Home</h2>
+        <div id="temple-cards" class="grid-container">
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Barry Leidy - Idaho</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script>
+        document.getElementById('currentyear').textContent = new Date().getFullYear();
+        document.getElementById('lastModified').textContent = 'Last Modified: ' + document.lastModified;
+    </script>
+</body>
+</html>
