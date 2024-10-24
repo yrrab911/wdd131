@@ -3,51 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site Plan - BYU Volleyball Group Finder</title>
+    <title>BYU Volleyball Group Finder</title>
     <link rel="stylesheet" href="styles/volleyball.css">
-    <script src="scripts/volleyball.js"></script>
+    <script src="scripts/volleyball.js" defer></script>
 </head>
 <body>
 
-    <h1>Site Plan for BYU Volleyball Group Finder</h1>
-
-    <h2>Site Name</h2>
-    <p><strong>BYU Volleyball Group Finder</strong></p>
-    <p>This name clearly indicates the purpose of the site: to help BYU students find and join volleyball groups. It is relevant to the target audience and easy to remember.</p>
-
-    <h2>Site Purpose</h2>
-    <p>The site serves as a hub for BYU students to connect with others interested in playing volleyball. It will provide information about volleyball rules, allow users to create and join games, and foster a community among players.</p>
-
-    <h2>Scenarios</h2>
-    <p>1. What days and times are there volleyball games scheduled this week?</p>
-    <p>2. How can I create a new game post to invite others to join?</p>
-
-    <h2>Color Schema</h2>
-    <p><strong>Primary Color:</strong> #007BFF (Used for headings and buttons)</p>
-    <p><strong>Secondary Color:</strong> #28A745 (Used for accents and highlights)</p>
+    <header>
+        <h1 style="text-align: center;">BYU Volleyball Group Finder 
+            <a href="volley_wireframe.html" target="_blank">View Wireframe</a>
+        </h1>
+    </header>
     
-    <h2>Typography</h2>
-    <p><strong>Headings:</strong> Montserrat, sans-serif</p>
-    <p><strong>Body:</strong> Arial, sans-serif</p>
-    
-    <h2>Wireframe</h2>
-    <div class="wireframe">
-        <h3>Mobile View</h3>
-        <img src="images/volley_mobile.jpg" alt="mobile view">
-    </div>
-    <div class="wireframe">
-        <h3>Desktop View</h3>
-        <img src="images/volley_desk.jpg" alt="desktop view">
+        <section id="websiteInfo" style="text-align: center;">
+            <h2>Welcome to the BYU Volleyball Group Finder! This website helps you find and create volleyball groups at BYU.</h2>
+            <p style="font-size: 1.2em; font-weight: bold;">Learn how to play volleyball:</p>
+            <p style="font-size: 1.1em;">- Serve the ball over the net.</p>
+            <p style="font-size: 1.1em;">- Pass the ball to teammates.</p>
+            <p style="font-size: 1.1em;">- Set the ball for a spike.</p>
+            <p style="font-size: 1.1em;">- Attack the ball to score points!</p>
+        </section>
+
+    <section id="groupCreator" style="display: flex; align-items: center; justify-content: center; margin: 20px 0;">
+        <div style="flex: 1; text-align: center;">
+            <h2>Create a Volleyball Group</h2>
+            <div id="groupCreationForm">
+                <label for="selectTime">Select Time:</label>
+                <input type="text" id="selectTime" placeholder="Enter time">
+
+                <label for="groupMaker">Group Maker:</label>
+                <input type="text" id="groupMaker" placeholder="Enter your name">
+
+                <label for="groupDescription">Description:</label>
+                <input type="text" id="groupDescription" placeholder="Enter description">
+
+                <button id="createGroupBtn">Create Group</button>
+            </div>
+        </div>
+        <div style="flex: 1; text-align: center;">
+            <img src="images/volleyball.jpg" alt="Volleyball" style="max-width: 100%; height: auto;">
+        </div>
+    </section>
+
+    <h2>Upcoming Volleyball Groups</h2>
+    <div id="groupContainer">
+        <!-- New groups will be displayed here -->
     </div>
 
-<footer>
-<p>&copy; <span id="currentyear"></span> Barry Leidy - Idaho</p>
-    <p id="lastModified"></p>
-</footer>
+    <footer style="text-align: center; margin-top: auto;">
+        <p>&copy; <span id="currentyear"></span> Barry Leidy - Idaho</p>
+        <p id="lastModified"></p>
+    </footer>
 
-<script>
-    document.getElementById('currentyear').textContent = new Date().getFullYear();
-    document.getElementById('lastModified').textContent = 'Last Modified: ' + document.lastModified;
-</script>
+    <script>
+        // Display current year and last modified date in footer
+        document.getElementById('currentyear').textContent = new Date().getFullYear();
+        document.getElementById('lastModified').textContent = 'Last Modified: ' + document.lastModified;
+    </script>
+
 </body>
 </html>

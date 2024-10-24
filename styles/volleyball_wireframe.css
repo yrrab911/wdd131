@@ -1,0 +1,18 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 20px;
+}
+h1, h2, h3 {
+    color: #002D62;
+}
+p {
+    margin: 10px 0;
+}
+.wireframe {
+    background-color: #e9ecef;
+    border: 1px dashed #002D62;
+    padding: 20px;
+    margin: 20px 0;
+}

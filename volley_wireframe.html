@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Plan - BYU Volleyball Group Finder</title>
+    <link rel="stylesheet" href="styles/volleyball.css">
+    <script src="scripts/volleyball.js"></script>
+</head>
+<body>
+
+    <h1>Site Plan for BYU Volleyball Group Finder</h1>
+
+    <h2>Site Name</h2>
+    <p><strong>BYU Volleyball Group Finder</strong></p>
+    <p>This name clearly indicates the purpose of the site: to help BYU students find and join volleyball groups. It is relevant to the target audience and easy to remember.</p>
+
+    <h2>Site Purpose</h2>
+    <p>The site serves as a hub for BYU students to connect with others interested in playing volleyball. It will provide information about volleyball rules, allow users to create and join games, and foster a community among players.</p>
+
+    <h2>Scenarios</h2>
+    <p>1. What days and times are there volleyball games scheduled this week?</p>
+    <p>2. How can I create a new game post to invite others to join?</p>
+
+    <h2>Color Schema</h2>
+    <p><strong>Primary Color:</strong> #007BFF (Used for headings and buttons)</p>
+    <p><strong>Secondary Color:</strong> #28A745 (Used for accents and highlights)</p>
+    
+    <h2>Typography</h2>
+    <p><strong>Headings:</strong> Montserrat, sans-serif</p>
+    <p><strong>Body:</strong> Arial, sans-serif</p>
+    
+    <h2>Wireframe</h2>
+    <div class="wireframe">
+        <h3>Mobile View</h3>
+        <img src="images/volley_mobile.jpg" alt="mobile view">
+    </div>
+    <div class="wireframe">
+        <h3>Desktop View</h3>
+        <img src="images/volley_desk.jpg" alt="desktop view">
+    </div>
+
+<footer>
+<p>&copy; <span id="currentyear"></span> Barry Leidy - Idaho</p>
+    <p id="lastModified"></p>
+</footer>
+
+<script>
+    document.getElementById('currentyear').textContent = new Date().getFullYear();
+    document.getElementById('lastModified').textContent = 'Last Modified: ' + document.lastModified;
+</script>
+</body>
+</html>
